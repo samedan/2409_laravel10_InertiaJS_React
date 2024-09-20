@@ -6,6 +6,10 @@ https://www.youtube.com/watch?v=qBxo6hW83jU&list=PL38wFHH4qYZVOnXxcS0NMGGmUsZky6
 
 https://github.com/JonVadar/YouTube_videos
 
+### This Git :
+
+https://github.com/samedan/2409_laravel10_InertiaJS_React
+
 ### Install Laravel, React, InertiaJS, TailwindCSS
 
 ## InertiaJS

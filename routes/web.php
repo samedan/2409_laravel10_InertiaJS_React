@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 // INERTIA Type
 Route::get('/', function () {
-    return inertia('Home');
+    return Inertia::render('Home', ['name' => 'Dan']);
 });
+
+// Route::inertia('/', 'Home');
+
