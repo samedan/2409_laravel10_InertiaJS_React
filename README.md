@@ -30,3 +30,7 @@ https://github.com/samedan/2409_laravel10_InertiaJS_React
 
 > Home.jsx -> Home.layout = (page) => <Layout children={page} />;
 > or defaultLayout : app.jsx -> page.default.layout =...
+
+### preserveScroll, progressIndicator
+
+> app.js
