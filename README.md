@@ -10,6 +10,9 @@ https://github.com/JonVadar/YouTube_videos
 
 https://github.com/samedan/2409_laravel10_InertiaJS_React
 
+> php artisan serve
+> npm run dev
+
 ### Install Laravel, React, InertiaJS, TailwindCSS
 
 ## InertiaJS
@@ -22,3 +25,8 @@ https://github.com/samedan/2409_laravel10_InertiaJS_React
 ### relative path to folders = aliases
 
 > vite.config.js -> resolve: { alias: {}}
+
+### Apply Layout to Home
+
+> Home.jsx -> Home.layout = (page) => <Layout children={page} />;
+> or defaultLayout : app.jsx -> page.default.layout =...
