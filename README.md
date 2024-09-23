@@ -46,3 +46,7 @@ https://github.com/samedan/2409_laravel10_InertiaJS_React
 ## Create data
 
 > PostFactory.php , DatabaseSeeder.php, php artisan db:seed
+
+### Paginate
+
+> PostController.php, Home.jsx
