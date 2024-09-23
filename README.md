@@ -31,6 +31,18 @@ https://github.com/samedan/2409_laravel10_InertiaJS_React
 > Home.jsx -> Home.layout = (page) => <Layout children={page} />;
 > or defaultLayout : app.jsx -> page.default.layout =...
 
-### preserveScroll, progressIndicator
+## preserveScroll, progressIndicator
 
 > app.js
+
+### Models & Controllers
+
+> php artisan make:model Post -a
+
+### Create Routes
+
+> php artisan route:list
+
+## Create data
+
+> PostFactory.php , DatabaseSeeder.php, php artisan db:seed

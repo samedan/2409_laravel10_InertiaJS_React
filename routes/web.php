@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -19,10 +20,15 @@ use Inertia\Inertia;
 // });
 
 // INERTIA Type
-Route::get('/', function () {
-    sleep(3);
-    return Inertia::render('Home', ['name' => 'Dan']);
-});
+// Route::get('/', function () {
+//     sleep(3);
+//     return Inertia::render('Home', ['name' => 'Dan']);
+// });
 
 // Route::inertia('/', 'Home');
+
+// GET /
+Route::get('/', [PostController::class, 'index']);
+
+Route::resource('posts', PostController::class)->except('index');
 
