@@ -1,15 +1,32 @@
-import { Link } from "@inertiajs/react";
-import React from "react";
+import { Link, usePage } from "@inertiajs/react";
+import React, { useState } from "react";
 import { useRoute } from "../../../vendor/tightenco/ziggy";
 
 export default function Home({ posts }) {
-    console.log(posts);
+    // console.log(posts);
+
+    console.log(usePage());
 
     const route = useRoute();
+
+    // Retrieve message (delete message) if available
+    const { flash } = usePage().props;
+    const [flashMsg, setFlashMsg] = useState(flash.message);
+    // delete message after a while
+    setTimeout(() => {
+        setFlashMsg(null);
+    }, 3000);
 
     return (
         <>
             <div className="title">Home</div>
+            {/* Flash message coming from HandleInertiaRequests ('message'), PostController ('destroy()') */}
+            {flashMsg && (
+                <div className="absolute top-24 right-6 bg-rose-500 p-2 rounded-md shadow-lg text-sm text-white">
+                    {flashMsg}
+                </div>
+            )}
+
             <div>
                 {posts.data.map((post) => (
                     <div key={post.id} className="p-4 border-b">

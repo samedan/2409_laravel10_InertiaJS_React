@@ -1,4 +1,5 @@
 import { useForm } from "@inertiajs/react";
+import { useRoute } from "../../../vendor/tightenco/ziggy";
 
 export default function Show({ post }) {
     // console.log(useForm());
@@ -6,9 +7,12 @@ export default function Show({ post }) {
     // alias to avoid 'delete' use name
     const { delete: destroy } = useForm();
 
+    const route = useRoute();
+
     function submit(e) {
         e.preventDefault();
-        destroy(`/posts/${post.id}`);
+        // destroy(`/posts/${post.id}`);
+        destroy(route("posts.destroy", post));
     }
 
     return (
