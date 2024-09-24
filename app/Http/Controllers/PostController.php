@@ -40,12 +40,12 @@ class PostController extends Controller
         return redirect('/');
     }
 
-    /**
+    /** Render a Post
      * Display the specified resource.
      */
     public function show(Post $post)
     {
-        //
+        return inertia("Show", ['post' => $post]);
     }
 
     /**

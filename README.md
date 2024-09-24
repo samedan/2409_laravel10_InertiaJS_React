@@ -54,3 +54,8 @@ https://github.com/samedan/2409_laravel10_InertiaJS_React
 ### Create Form
 
 > https://inertiajs.com/forms
+
+## Named Routes with Ziggy
+
+> https://github.com/tighten/ziggy
+> import @routes in app.blade.php
