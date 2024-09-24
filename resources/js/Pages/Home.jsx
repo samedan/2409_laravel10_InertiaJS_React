@@ -28,6 +28,11 @@ export default function Home({ posts }) {
             {/* </Head> */}
             <div className="title">Home</div>
             {/* Flash message coming from HandleInertiaRequests ('message'), PostController ('destroy()') */}
+            {flash.success && (
+                <div className="absolute top-24 right-6 bg-green-500 p-2 rounded-md shadow-lg text-sm text-white">
+                    {flash.success}
+                </div>
+            )}
             {flashMsg && (
                 <div className="absolute top-24 right-6 bg-rose-500 p-2 rounded-md shadow-lg text-sm text-white">
                     {flashMsg}

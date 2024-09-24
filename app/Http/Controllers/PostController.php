@@ -53,18 +53,25 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return inertia('Edit', ['post'=> $post]);
     }
 
-    /**
+    /** PUT Post
      * Update the specified resource in storage.
      */
     public function update(Request $request, Post $post)
     {
-        //
+        // sleep(1);
+        // dd($post);
+        $fields = $request->validate([
+            "body" => ['required', 'min:3']
+        ]);
+        $post->update($fields);
+        // dd($request);
+        return redirect('/')->with('success', 'The post was updated');
     }
 
-    /**
+    /** DELETE Post
      * Remove the specified resource from storage.
      */
     public function destroy(Post $post)
