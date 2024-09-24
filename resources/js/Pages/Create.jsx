@@ -1,4 +1,4 @@
-import { useForm } from "@inertiajs/react";
+import { Head, useForm } from "@inertiajs/react";
 
 export default function Create() {
     // console.log(useForm());
@@ -16,6 +16,14 @@ export default function Create() {
 
     return (
         <>
+            <Head>
+                <title>Create post</title>
+                <meta
+                    head-key="description"
+                    name="description"
+                    content="Create description"
+                />
+            </Head>
             <h1 className="title">Create Post</h1>
             {/* <div>{data.body}</div> */}
 

@@ -1,4 +1,5 @@
-import { Link, usePage } from "@inertiajs/react";
+import { Link, usePage, Head } from "@inertiajs/react";
+
 import React, { useState } from "react";
 import { useRoute } from "../../../vendor/tightenco/ziggy";
 
@@ -8,6 +9,8 @@ export default function Home({ posts }) {
     console.log(usePage());
 
     const route = useRoute();
+
+    const { component } = usePage();
 
     // Retrieve message (delete message) if available
     const { flash } = usePage().props;
@@ -19,6 +22,10 @@ export default function Home({ posts }) {
 
     return (
         <>
+            <Head title={component} />
+            {/* <title>{component}</title> */}
+            {/* <meta name="description" content="Your page description" /> */}
+            {/* </Head> */}
             <div className="title">Home</div>
             {/* Flash message coming from HandleInertiaRequests ('message'), PostController ('destroy()') */}
             {flashMsg && (
