@@ -1,6 +1,6 @@
 ### Source Youtube :
 
-https://www.youtube.com/watch?v=qBxo6hW83jU&list=PL38wFHH4qYZVOnXxcS0NMGGmUsZky6JNG
+https://youtu.be/Q6SO5bV5DLk?si=Rfoi4rHbuhcNRK2c&t=590
 
 ### GitHub Source :
 
@@ -50,3 +50,7 @@ https://github.com/samedan/2409_laravel10_InertiaJS_React
 ### Paginate
 
 > PostController.php, Home.jsx
+
+### Create Form
+
+> https://inertiajs.com/forms
